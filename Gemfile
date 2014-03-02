@@ -33,7 +33,7 @@ group :doc do
 end
 
 gem 'simplecov', :require => false, :group => :test
-gem install sqlite3
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
