@@ -1,3 +1,5 @@
+# encoding: UTF-8
+# Clase de controlador: Post
 class PostsController < ApplicationController
   def new
     @post = Post.new
@@ -11,7 +13,6 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
-
   end
 
   def show
@@ -21,11 +22,11 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-  
+
   def edit
     @post = Post.find(params[:id])
   end
-  
+
   def update
     @post = Post.find(params[:id])
 
@@ -42,8 +43,9 @@ class PostsController < ApplicationController
 
     redirect_to :action => :index
   end
-  
+
   private
+
   def post_params
     params.require(:post).permit(:titulo, :texto)
   end
