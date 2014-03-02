@@ -8,5 +8,5 @@ Blog::Application.load_tasks
 task :default => [:test]
 
 task :test do
-rake test "test/controllers/*_test.rb"
+
 end

@@ -12,4 +12,4 @@ before_install:
   - gem update # optional, update all gems
   - gem install selenium-webdriver
   - phantomjs --version # optional, output the phantomjs version
-  - gem install sqlite3
+ # - gem install sqlite3
