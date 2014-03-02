@@ -4,3 +4,9 @@
 require File.expand_path('../config/application', __FILE__)
 
 Blog::Application.load_tasks
+
+task :default => [:test]
+
+task :test do
+rake test "test/controllers/*_test.rb"
+end
