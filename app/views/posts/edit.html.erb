@@ -1,5 +1,5 @@
 <%-# Vista edición de posts  -%>
-<h1>Editar Post</h1>
+<h1>Editar Artículo</h1>
 
 <%= form_for :post, :url => { :action => :update, :id => @post.id },:method => :put do |f| %>
   <% if @post.errors.any? %>
@@ -23,7 +23,7 @@
   </p>
 
   <p>
-    <%= f.submit %>
+    <%= f.submit :'Actualizar artículo' %>
   </p>
 <% end %>
 
