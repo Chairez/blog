@@ -9,7 +9,7 @@ rvm:
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 before_install:
- # - gem update # optional, update all gems
+  - gem update # optional, update all gems
   - gem install selenium-webdriver
   - phantomjs --version # optional, output the phantomjs version
  # - gem install sqlite3
