@@ -33,8 +33,7 @@ group :doc do
 end
 
 gem 'simplecov', :require => false, :group => :test
-gem 'selenium-webdriver'
-
+gem 'selenium-webdriver', :require => true, :group => :test
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
