@@ -4,7 +4,8 @@ class Post < ActiveRecord::Base
   # attr_accessible :texto, :titulo
   validates :titulo, :presence => true,
                      :length => { :minimum => 5 }
-
+  
+  has_many :comments
   private
 
   def post_params
