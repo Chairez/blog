@@ -1,4 +1,6 @@
 # encoding: UTF-8
+require 'simplecov'
+SimpleCov.start
 require 'test_helper'
 
 # Clase de pruebas de unidad: Post
@@ -44,12 +46,11 @@ class PostsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  # Pruebas para editar un post
-  test 'debe actualizar un post' do
-    get :update, post: @post
-    assert_response :success
+  test "debe actualizar un post" do
+    post = posts(:one)
+    put :update, :id => post, :post => {:titulo => "Sobres"}
+    assert_equal "Sobres", post.reload.titulo
   end
-
   # Pruebas para eliminar un post
   test 'debe destruir un post' do
     assert_difference('Post.count', -1) do
