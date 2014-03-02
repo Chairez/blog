@@ -1,28 +1,36 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
-  get "posts/new"
-
-  #ruta para creacion de posts
-  post "posts" => "posts#create"
   
-  #ruta para mostrar el post creado
-  get "posts/:id" => "posts#show", :as => :post
+  root :to => "welcome#index"
+  
+  resources :posts  do
+    resources :comments
+  end
 
-  #ruta para listar todos los posts
-  get "posts" => "posts#index"
 
-  #ruta para edicion de articulos
-  get "posts/:id/edit" => "posts#edit"
-
-  put "posts/:id" => "posts#update"
-
-  #eliminar artículos
-  delete "posts/:id" => "posts#destroy"
+#  get "welcome/index"
+#  # The priority is based upon order of creation: first created -> highest priority.
+#  # See how all your routes lay out with "rake routes".
+#
+#  # You can have the root of your site routed with "root"
+#  root 'welcome#index'
+#  get "posts/new"
+#
+#  #ruta para creacion de posts
+#  post "posts" => "posts#create"
+#  
+#  #ruta para mostrar el post creado
+#  get "posts/:id" => "posts#show", :as => :post
+#
+#  #ruta para listar todos los posts
+#  get "posts" => "posts#index"
+#
+#  #ruta para edicion de articulos
+#  get "posts/:id/edit" => "posts#edit"
+#
+#  put "posts/:id" => "posts#update"
+#
+#  #eliminar artículos
+#  delete "posts/:id" => "posts#destroy"
 
 
   # Example of regular route:
