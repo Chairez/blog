@@ -29,7 +29,19 @@
 
 <h2> Agregar comentario: </h2>
 <%= form_for([@post, @post.comments.build]) do |f| %>
-  <p>
+  
+    <% if @post.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@post.errors.count, "error") %>
+        No se ha guardado el comentario: </h2>
+        <ul>
+          <% @post.errors.full_message.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <p> 
     <h4>Usuario:</h4>
     <%= f.text_field :commenter %>
   </p>
