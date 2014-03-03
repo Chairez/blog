@@ -29,7 +29,7 @@ class CrearArticuloTest < Test::Unit::TestCase
     @driver.find_element(:name, "commit").click
     assert !60.times{ break if (element_present?(:css, "h1") rescue false); sleep 1 }
     assert_equal "Artículo", @driver.find_element(:css, "h1").text
-    @driver.find_element(:link, "Volveree").click
+    @driver.find_element(:link, "Volver").click
   end
   
   def element_present?(how, what)
