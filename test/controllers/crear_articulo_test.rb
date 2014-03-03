@@ -2,7 +2,6 @@
 # Clase Bob
 require "json"
 require "selenium-webdriver"
-gem "test-unit"
 require "test/unit"
 
 class CrearArticuloTest < Test::Unit::TestCase
