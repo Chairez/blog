@@ -25,7 +25,7 @@ class PostsControllerTest < ActionController::TestCase
       post :create, post: { titulo: 'El que sea',
                             texto: 'otra vez el que sea' }
     end
-    assert_redirected_to post_path(assigns(:post))
+    assert_redirected_to posts_path
   end
 
   # Pruebas para mostrar un post
