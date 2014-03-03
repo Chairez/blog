@@ -8,5 +8,4 @@ Blog::Application.load_tasks
 task :default => [:test]
 
 task :test do
-
 end
