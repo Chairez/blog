@@ -19,6 +19,6 @@ before_install:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - sleep 4 # give xvfb some time to start
-  - rackup -D # start a Web server
-  - sleep 4 # give Web server some time to bind to sockets, etc
+  - sleep 4
+  - rackup -D
+  - sleep 4
