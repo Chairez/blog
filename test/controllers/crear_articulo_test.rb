@@ -8,7 +8,7 @@ class CrearArticuloTest < Test::Unit::TestCase
 
   def setup
     @driver = Selenium::WebDriver.for :phantomjs
-    @base_url = "http://localhost:3000/posts"
+    @base_url = "http://localhost:9292/posts"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
     @verification_errors = []
