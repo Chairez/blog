@@ -27,4 +27,4 @@ deploy:
   provider: openshift
   user: "bird_chairez@hotmail.com"
   password: "sadbuttrue12" # can be encrypted
-  domain: "http://ruby-blogvyvs.rhcloud.com/"
+  domain: "ruby-blogvyvs.rhcloud.com"
