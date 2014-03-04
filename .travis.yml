@@ -22,3 +22,9 @@ before_script:
   - sleep 4
   - rackup -D
   - sleep 4
+
+deploy:
+  provider: openshift
+  user: "bird_chairez@hotmail.com"
+  password: "sadbuttrue12" # can be encrypted
+  domain: "http://ruby-blogvyvs.rhcloud.com/"
