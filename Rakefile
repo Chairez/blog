@@ -8,5 +8,8 @@ Blog::Application.load_tasks
 task :default => [:test]
 
 task :test do
-	ruby "test/controllers/*_seltest.rb"
+  test_files = FileList['test/controllers/*_seltest.rb']
+  test_files.each do|file|
+    ruby "#{file}"
+  end
 end
