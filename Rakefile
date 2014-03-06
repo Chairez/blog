@@ -8,5 +8,5 @@ Blog::Application.load_tasks
 task :default => [:test]
 
 task :test do
-	ruby "test/controllers/crear_articulo_test.rb"
+	ruby "test/controllers/*_seltest.rb"
 end
