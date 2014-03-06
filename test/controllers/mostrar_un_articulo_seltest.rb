@@ -4,7 +4,7 @@ require "selenium-webdriver"
 gem "test-unit"
 require "test/unit"
 
-class MostrarArticulosSeltest < Test::Unit::TestCase
+class MostrarUnArticuloSeltest < Test::Unit::TestCase
 
   def setup
     @driver = Selenium::WebDriver.for :phantomjs
@@ -19,12 +19,18 @@ class MostrarArticulosSeltest < Test::Unit::TestCase
     assert_equal [], @verification_errors
   end
   
-  def test_mostrar_articulos_sel
+  def test_mostrar_un_articulo_sel
     @driver.get(@base_url + "/")
     @driver.find_element(:link, "Mi primer blog").click
-    assert !60.times{ break if (element_present?(:css, "h1") rescue false); sleep 1 }
-    # ERROR: Caught exception [ERROR: Unsupported command [getTable | css=table.0.1 | ]]
-    assert_equal "Texto", @driver.find_element(:xpath, "//th[2]").text
+    @driver.find_element(:link, "Crear artículo").click
+    @driver.find_element(:id, "post_titulo").clear
+    @driver.find_element(:id, "post_titulo").send_keys "prueba mostrar"
+    @driver.find_element(:id, "post_texto").clear
+    @driver.find_element(:id, "post_texto").send_keys "texto prueba mostrar"
+    @driver.find_element(:name, "commit").click
+    assert !60.times{ break if (element_present?(:link, "Editar") rescue false); sleep 1 }
+    assert_equal "Titulo:", @driver.find_element(:css, "strong").text
+    assert_equal "Texto:", @driver.find_element(:xpath, "//p[2]/strong").text
   end
   
   def element_present?(how, what)
