@@ -23,7 +23,7 @@ before_script:
   - rackup -D
   - sleep 4
 
- deploy:
+deploy:
   provider: openshift
   user: "bird_chairez@hotmail.com"
   password: "12345678" # can be encrypted
@@ -33,9 +33,6 @@ before_script:
 # deploy:
  # provider: rubygems
  # api_key: "fea469cb25377e067f2cdf9a301d0c46"
-
-
-
 
 # deploy:
  # provider: cloudcontrol
