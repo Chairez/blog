@@ -22,16 +22,20 @@ before_script:
   - sleep 4
   - rackup -D
   - sleep 4
-
+  
 deploy:
-  provider: openshift
-  user: "bird_chairez@hotmail.com"
-  password: "sadbuttrue12" # can be encrypted
-  domain: "blogvyvs"
+  provider: rubygems
+  api_key: "fea469cb25377e067f2cdf9a301d0c46"
+
+# deploy:
+ # provider: openshift
+ # user: "bird_chairez@hotmail.com"
+ # password: "sadbuttrue12" # can be encrypted
+ # domain: "blogvyvs"
 
 
-deploy:
-  provider: cloudcontrol
-  email: "bird_chairez@hotmail.com"
-  password: "12345678"
-  deployment: "blogvyvsw/master"
+# deploy:
+ # provider: cloudcontrol
+ # email: "bird_chairez@hotmail.com"
+ # password: "12345678"
+ # deployment: "blogvyvsw/master"
