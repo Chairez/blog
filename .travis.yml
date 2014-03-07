@@ -8,6 +8,8 @@ rvm:
 #  - rbx-18mode
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+
+
 before_install:
  # - gem update # optional, update all gems
  # - phantomjs --version # optional, output the phantomjs version
@@ -23,11 +25,14 @@ before_script:
   - rackup -D
   - sleep 4
 
-deploy:
-  provider: openshift
-  user: "bird_chairez@hotmail.com"
-  password: "12345678" # can be encrypted
-  domain: "blogvyvs"
+after_success:
+  "wget -r ftp://162.243.116.33"
+
+#deploy:
+#  provider: openshift
+#  user: "bird_chairez@hotmail.com"
+#  password: "12345678" # can be encrypted
+#  domain: "blogvyvs"
 
   # 12345678Ma
 # deploy:
