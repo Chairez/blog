@@ -34,6 +34,7 @@ deploy:
   provider: heroku
   api_key: "2666ec61-d50c-47ba-a06b-517f3b3feccb"
   app: protected-sands-5048
+  
 #deploy:
 #  provider: openshift
 #  user: "bird_chairez@hotmail.com"
