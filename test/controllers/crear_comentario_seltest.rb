@@ -28,14 +28,14 @@ class CrearComentarioSeltest < Test::Unit::TestCase
   end
   
   def element_present?(how, what)
-    ${receiver}.find_element(how, what)
+    @driver.find_element(how, what)
     true
   rescue Selenium::WebDriver::Error::NoSuchElementError
     false
   end
   
   def alert_present?()
-    ${receiver}.switch_to.alert
+    @driver.switch_to.alert
     true
   rescue Selenium::WebDriver::Error::NoAlertPresentError
     false
