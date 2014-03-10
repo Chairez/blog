@@ -18,6 +18,7 @@ class EliminarComentarioSeltest < Test::Unit::TestCase
   end
   
   def test_eliminar_comentario_sel
+    @driver.get(@base_url)
     @driver.find_element(:link, "Mi primer blog").click
     @driver.find_element(:link, "Crear artículo").click
     @driver.find_element(:id, "post_titulo").clear

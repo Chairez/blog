@@ -1,3 +1,5 @@
+# encoding: UTF-8
+# Clase Bob
 require "json"
 require "selenium-webdriver"
 require "test/unit"
@@ -6,7 +8,7 @@ class CrearComentarioSeltest < Test::Unit::TestCase
 
   def setup
     @driver = Selenium::WebDriver.for :phantomjs
-    @base_url = "http://localhost:9292/"
+    @base_url = "http://localhost:9292/posts"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
     @verification_errors = []
@@ -18,8 +20,7 @@ class CrearComentarioSeltest < Test::Unit::TestCase
   end
   
   def test_crear_comentario_sel
-    
-    @driver.find_element(:link, "Mi primer blog").click
+    @driver.get(@base_url)
     @driver.find_element(:link, "Crear artículo").click
     @driver.find_element(:id, "post_titulo").clear
     @driver.find_element(:id, "post_titulo").send_keys "prueba 1"
