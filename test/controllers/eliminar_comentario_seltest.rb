@@ -1,3 +1,4 @@
+
 require "json"
 require "selenium-webdriver"
 require "test/unit"
@@ -6,7 +7,7 @@ class EliminarComentarioSeltest < Test::Unit::TestCase
 
   def setup
     @driver = Selenium::WebDriver.for :phantomjs
-    @base_url = "http://localhost:9292/"
+    @base_url = "http://localhost:9292/posts"
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
     @verification_errors = []
@@ -19,20 +20,19 @@ class EliminarComentarioSeltest < Test::Unit::TestCase
   
   def test_eliminar_comentario_sel
     @driver.get(@base_url)
-    @driver.find_element(:link, "Mi primer blog").click
     @driver.find_element(:link, "Crear artículo").click
     @driver.find_element(:id, "post_titulo").clear
-    @driver.find_element(:id, "post_titulo").send_keys "prueba 1"
+    @driver.find_element(:id, "post_titulo").send_keys "prueba n"
     @driver.find_element(:id, "post_texto").clear
-    @driver.find_element(:id, "post_texto").send_keys "articulo de prueba 1"
+    @driver.find_element(:id, "post_texto").send_keys "texto prueba n"
     @driver.find_element(:name, "commit").click
     @driver.find_element(:id, "comment_commenter").clear
-    @driver.find_element(:id, "comment_commenter").send_keys "usuario de prueba"
+    @driver.find_element(:id, "comment_commenter").send_keys "usuario n"
     @driver.find_element(:id, "comment_body").clear
-    @driver.find_element(:id, "comment_body").send_keys "comentario de prueba"
+    @driver.find_element(:id, "comment_body").send_keys "comentario n"
     @driver.find_element(:name, "commit").click
     @driver.find_element(:link, "Eliminar Comentario").click
-    assert !element_present?(:link, "Eliminar Comentario")
+    assert_match /^¿Estás seguro[\s\S]$/, close_alert_and_get_its_text()
   end
   
   def element_present?(how, what)
