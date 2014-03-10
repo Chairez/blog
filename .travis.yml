@@ -16,6 +16,9 @@ before_install:
  # - gem install sqlite3
    - gem install selenium-webdriver
    - gem install rack
+   - bundle install
+   - rake db:create
+   - rake db:migrate
     
 
 before_script:
@@ -25,9 +28,12 @@ before_script:
   - rackup -D
   - sleep 4
 
-after_success:
-  "wget -r ftp://162.243.116.33"
-
+#after_success:
+#  "wget -r ftp://162.243.116.33"
+deploy:
+  provider: heroku
+  api_key: "2666ec61-d50c-47ba-a06b-517f3b3feccb"
+  app: protected-sands-5048
 #deploy:
 #  provider: openshift
 #  user: "bird_chairez@hotmail.com"
