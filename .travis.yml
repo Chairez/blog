@@ -15,11 +15,7 @@ before_install:
  # - phantomjs --version # optional, output the phantomjs version
  # - gem install sqlite3
    - gem install selenium-webdriver
-   - gem install rack
-   - bundle install
-   - rake db:create
-   - rake db:migrate
-    
+   - gem install rack    
 
 before_script:
   - "export DISPLAY=:99.0"
