@@ -1,4 +1,5 @@
-
+# encoding: UTF-8
+# Clase Bob
 require "json"
 require "selenium-webdriver"
 require "test/unit"
@@ -22,14 +23,14 @@ class EliminarComentarioSeltest < Test::Unit::TestCase
     @driver.get(@base_url)
     @driver.find_element(:link, "Crear artículo").click
     @driver.find_element(:id, "post_titulo").clear
-    @driver.find_element(:id, "post_titulo").send_keys "prueba n"
+    @driver.find_element(:id, "post_titulo").send_keys "prueba 1"
     @driver.find_element(:id, "post_texto").clear
-    @driver.find_element(:id, "post_texto").send_keys "texto prueba n"
+    @driver.find_element(:id, "post_texto").send_keys "articulo de prueba 1"
     @driver.find_element(:name, "commit").click
     @driver.find_element(:id, "comment_commenter").clear
-    @driver.find_element(:id, "comment_commenter").send_keys "usuario n"
+    @driver.find_element(:id, "comment_commenter").send_keys "usuario de prueba"
     @driver.find_element(:id, "comment_body").clear
-    @driver.find_element(:id, "comment_body").send_keys "comentario n"
+    @driver.find_element(:id, "comment_body").send_keys "comentario de prueba"
     @driver.find_element(:name, "commit").click
     @driver.find_element(:link, "Eliminar Comentario").click
     assert_match /^¿Estás seguro[\s\S]$/, close_alert_and_get_its_text()
