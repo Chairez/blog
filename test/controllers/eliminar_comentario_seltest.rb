@@ -12,7 +12,6 @@ class EliminarComentarioSeltest < Test::Unit::TestCase
     @accept_next_alert = true
     @driver.manage.timeouts.implicit_wait = 30
     @verification_errors = []
-  end
   
   def teardown
     @driver.quit
@@ -23,17 +22,18 @@ class EliminarComentarioSeltest < Test::Unit::TestCase
     @driver.get(@base_url)
     @driver.find_element(:link, "Crear artículo").click
     @driver.find_element(:id, "post_titulo").clear
-    @driver.find_element(:id, "post_titulo").send_keys "prueba 1"
+    @driver.find_element(:id, "post_titulo").send_keys "articulo 1"
     @driver.find_element(:id, "post_texto").clear
-    @driver.find_element(:id, "post_texto").send_keys "texto 1"
+    @driver.find_element(:id, "post_texto").send_keys "texto del articulo 1"
     @driver.find_element(:name, "commit").click
     @driver.find_element(:id, "comment_commenter").clear
     @driver.find_element(:id, "comment_commenter").send_keys "usuario n"
     @driver.find_element(:id, "comment_body").clear
-    @driver.find_element(:id, "comment_body").send_keys "texto n"
+    @driver.find_element(:id, "comment_body").send_keys "comentario n"
     @driver.find_element(:name, "commit").click
     @driver.find_element(:link, "Eliminar Comentario").click
-    assert_not_equal "Usuario: usuario n", @driver.find_element(:xpath, "//p[3]").text
+    assert_match /^¿Estás seguro[\s\S]$/, close_alert_and_get_its_text()
+    assert !element_present?(:link, "Eliminar Comentario")
   end
   
   def element_present?(how, what)
