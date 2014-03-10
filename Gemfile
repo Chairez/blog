@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -35,6 +35,8 @@ end
 gem 'simplecov', :require => false, :group => :test
 gem 'selenium-webdriver', :require => true, :group => :test
 gem 'test-unit', :require => true, :group => :test
+
+gem 'sqlite3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

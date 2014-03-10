@@ -40,6 +40,7 @@ GEM
     docile (1.1.2)
     erubis (2.7.0)
     execjs (2.0.2)
+    ffi (1.9.3)
     ffi (1.9.3-x86-mingw32)
     hike (1.2.3)
     i18n (0.6.9)
@@ -56,6 +57,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
+    pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -122,12 +124,14 @@ GEM
     websocket (1.0.7)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  pg
   rails (= 4.0.3)
   sass-rails (~> 4.0.0)
   sdoc
