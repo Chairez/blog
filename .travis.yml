@@ -30,16 +30,16 @@ before_script:
 
 #after_success:
 #  "wget -r ftp://162.243.116.33"
-deploy:
-  provider: heroku
-  api_key: "2666ec61-d50c-47ba-a06b-517f3b3feccb"
-  app: protected-sands-5048
-  
 #deploy:
-#  provider: openshift
-#  user: "bird_chairez@hotmail.com"
-#  password: "12345678" # can be encrypted
-#  domain: "blogvyvs"
+#  provider: heroku
+#  api_key: "2666ec61-d50c-47ba-a06b-517f3b3feccb"
+#  app: protected-sands-5048
+  
+deploy:
+  provider: openshift
+  user: "bird_chairez@hotmail.com"
+  password: "12345678" # can be encrypted
+  domain: "blogvyvs"
 
   # 12345678Ma
 # deploy:
