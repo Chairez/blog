@@ -1,6 +1,5 @@
 <%-# Vista edición de posts  -%>
-<div class="container">
-<h1 >Editar Artículo</h1>
+<h1>Editar Artículo</h1>
 
 <%= form_for :post, :url => { :action => :update, :id => @post.id },:method => :put do |f| %>
   <% if @post.errors.any? %>
@@ -29,4 +28,3 @@
 <% end %>
 
 <%= link_to 'Volver', :action => :index %>
-</dev>

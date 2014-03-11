@@ -1,11 +1,7 @@
 <%-# Vista para despligue de posts  -%>
-<h1 align="center">Lista de artículos</h1>
-<div class="container">
-
-<%= link_to 'Crear artículo',{ :action => :new} , :class => 'btn btn-success'%>
-
-<br>
-<table class="table table-bordered">
+<h1>Lista de artículos</h1>
+<%= link_to 'Crear artículo', :action => :new %>
+<table>
   <tr>
     <th>Titulo</th>
     <th>Texto</th>
@@ -18,10 +14,9 @@
     <tr>
       <td><%= post.titulo %></td>
       <td><%= post.texto %></td>
-      <td><%= link_to 'Mostrar',{ :action => :show, :id => post.id }, :class => 'btn btn-primary' %></td>
-      <td><%= link_to 'Editar',{ :action => :edit, :id => post.id },:class => 'btn btn-warning'  %></td>
-      <td><%= link_to 'Eliminar', {:action => :destroy, :id => post.id}, :method => :delete ,:class => 'btn btn-danger' %></td>
+      <td><%= link_to 'Mostrar', :action => :show, :id => post.id %></td>
+      <td><%= link_to 'Editar', :action => :edit, :id => post.id %></td>
+      <td><%= link_to 'Eliminar', {:action => :destroy, :id => post.id}, :method => :delete %></td>
     </tr>
   <% end %>
 </table>
-</dev>
