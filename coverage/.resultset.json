@@ -1,0 +1,122 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/home/chuy/Documentos/blog/test/test_helper.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/models/post.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/models/comment.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/controllers/posts_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/controllers/application_controller.rb": [
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/helpers/comments_helper.rb": [
+        1,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/home/chuy/Documentos/blog/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1394526197
+  }
+}
