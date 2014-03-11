@@ -24,20 +24,20 @@ before_script:
   - rackup -D
   - sleep 4
 
-#after_success:
-#  "wget -r ftp://162.243.116.33"
-#deploy:
-#  provider: heroku
-#  api_key: "2666ec61-d50c-47ba-a06b-517f3b3feccb"
-#  app: protected-sands-5048
-  
 deploy:
   provider: openshift
   user: "bird_chairez@hotmail.com"
   password: "12345678" # can be encrypted
   domain: "blogvyvs"
 
-  # 12345678Ma
+#after_success:
+#  "wget -r ftp://162.243.116.33"
+#deploy:
+#  provider: heroku
+#  api_key: "2666ec61-d50c-47ba-a06b-517f3b3feccb"
+#  app: protected-sands-5048
+
+# 12345678Ma
 # deploy:
  # provider: rubygems
  # api_key: "fea469cb25377e067f2cdf9a301d0c46"
